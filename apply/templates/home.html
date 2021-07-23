@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    {% load static %}
+	<head>
+		<title>멋쟁이 사자처럼 지원 페이지</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{%static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>멋쟁이 사자처럼 10기 지원 페이지 입니다.</h1>
+							</header>
+                            {% if user.is_authenticated %}
+                            <h3>{{user.name}}님🦁! 안녕하세요?</h3><br>
+                            <ul class="actions">
+								<li><a href="{%url 'urlnamenew' %}" class="button next scrolly">바로 지원하러 가기</a></li>
+                                <li><a href="{%url 'urlnamelogout' %}" class="button primary">로그아웃</a></li>
+                            </ul>
+                            {% endif %}
+							<div class="content">
+								<p>예비사자 여러분, 반갑습니다!</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+                        {% if user.is_authenticated %}
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic01.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{%url 'urlnamenew' %}" class="link">지원서 작성하기</a></h3>
+										<p>Ipsum dolor sit amet</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic02.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{%url 'urlnamereadall' %}" class="link">전체글 보기</a></h3>
+										<p>feugiat amet tempus</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic03.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="landing.html" class="link">Magna</a></h3>
+										<p>Lorem etiam nullam</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic04.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="landing.html" class="link">Ipsum</a></h3>
+										<p>Nisl sed aliquam</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic05.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="landing.html" class="link">Consequat</a></h3>
+										<p>Ipsum dolor sit amet</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{%static 'images/pic06.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="landing.html" class="link">Etiam</a></h3>
+										<p>Feugiat amet tempus</p>
+									</header>
+								</article>
+							</section>
+                        {% else %}
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>안녕하세요?</h2>
+									</header>
+									<p>회원가입을 하셔야 사이트를 이용하실 수 있습니다.</p>
+                                    <ul class="actions">
+                                        <li><a href="{%url 'urlnamelogin' %}" class="button primary">로그인</a></li>
+                                        <li><a href="{%url 'urlnamesignup' %}" class="button">회원가입</a></li>
+                                    </ul>
+								</div>
+							</section>
+                        {% endif %}
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="{%static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{%static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{%static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{%static 'assets/js/browser.min.js' %}"></script>
+			<script src="{%static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{%static 'assets/js/util.js' %}"></script>
+			<script src="{%static 'assets/js/main.js' %}"></script>
+	</body>
+</html>
